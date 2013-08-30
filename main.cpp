@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include<iostream>
+#include<stdio.h>
 #include<string.h>
 
 using namespace std;
@@ -7,7 +8,6 @@ void increment_matrix(int matrix[][100], int width, int height, int x, int y)
 {
     x--; y--;
     matrix[x][y] = -1;
-
     if((x+1)<width && (y+1)<height && matrix[x+1][y+1]!=-1)
         matrix[x+1][y+1]++;
     if((x+1)<width && (y-1)>=0 && matrix[x+1][y-1]!=-1)
@@ -30,13 +30,15 @@ void print_matrix(int matrix[][100], int width, int height)
 {
     for(int i=0;i<width;i++){
         for(int j=0;j<height;j++)
-            printf("%d ", matrix[i][j]);
+            matrix[i][j]==-1?printf("* "):printf("%d ", matrix[i][j]);
         printf("\n");
+
     }
 }
 
 int main()
 {
+
     int width, height, x, y;
     printf("Digite o tamanho do campo minado: (largura - altura) - maximo 100x100\n");
     scanf("%d %d", &width, &height);
@@ -54,5 +56,6 @@ int main()
     scanf("%d", &x);
     return 0;
 }
+
 
 

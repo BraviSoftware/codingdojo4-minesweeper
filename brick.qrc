@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="brick">
+    <file>brick_wall.png</file>
+  </qresource>
+</RCC>

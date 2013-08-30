@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="bomb_icon">
+    <file>1218_32x32.png</file>
+  </qresource>
+</RCC>
