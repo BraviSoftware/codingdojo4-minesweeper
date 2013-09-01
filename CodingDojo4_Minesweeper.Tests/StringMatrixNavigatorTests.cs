@@ -82,12 +82,30 @@ namespace CodingDojo4_Minesweeper.Tests
         }
 
         [Test]
+        public void CanGetPositionOnTopOfAnother_ReturnsNullIfValueIsOnTopRow()
+        {
+            const string input = "ABCD";
+            _nav.Load(input);
+            Assert.That(_nav.GetValueOnTopOf(0), Is.Null);
+            Assert.That(_nav.GetValueOnTopOf(1), Is.Null);
+        }
+
+        [Test]
         public void CanGetPositionBelowAnother()
         {
             const string input = "ABCD";
             _nav.Load(input);
             Assert.That(_nav.GetValueOnBelow(0), Is.EqualTo('C'));
             Assert.That(_nav.GetValueOnBelow(1), Is.EqualTo('D'));
+        }
+
+        [Test]
+        public void CanGetPositionBelowAnother_ReturnsNullIfPositionIsOnLastRow()
+        {
+            const string input = "ABCD";
+            _nav.Load(input);
+            Assert.That(_nav.GetValueOnBelow(2), Is.Null);
+            Assert.That(_nav.GetValueOnBelow(3), Is.Null);
         }
 
         [Test]

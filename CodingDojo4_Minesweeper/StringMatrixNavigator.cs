@@ -8,7 +8,7 @@ namespace CodingDojo4_Minesweeper
 {
     //totally overkill way to map a 1-dimensional string as as 2-dimensional
     //matrix, just to not use a bidimensional char array
-    public class StringMatrixNavigator
+    public class StringMatrixNavigator : IStringMatrixNavigator
     {
         private string _field;
 
@@ -47,12 +47,16 @@ namespace CodingDojo4_Minesweeper
 
         public char? GetValueOnTopOf(int pos)
         {
+            if (IsPositionInFirstRow(pos))
+                return null;
             var array = _field.ToCharArray();
             return array[pos - Dimension()];
         }
 
         public char? GetValueOnBelow(int pos)
         {
+            if (IsPositionInLastRow(pos))
+                return null;
             var array = _field.ToCharArray();
             return array[pos + Dimension()];
         }
