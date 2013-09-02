@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/empty_icon">
+        <file>empty.png</file>
+    </qresource>
+</RCC>

@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    minesweeper.cpp
+    minesweeper.cpp \
+    clickablelabel.cpp
 
 HEADERS  += mainwindow.h \
-    minesweeper.h
+    minesweeper.h \
+    clickablelabel.h
 
 FORMS    += \
     mainwindow.ui
@@ -28,4 +30,5 @@ RESOURCES += \
     one.qrc \
     brick.qrc \
     three.qrc \
-    four.qrc
+    four.qrc \
+    empty.qrc
