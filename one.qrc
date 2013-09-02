@@ -1,5 +1,5 @@
 <RCC>
-  <qresource prefix="one_icon">
-    <file>1377904610_one_page.png</file>
-  </qresource>
+    <qresource prefix="/one_icon">
+        <file>one_page.png</file>
+    </qresource>
 </RCC>
