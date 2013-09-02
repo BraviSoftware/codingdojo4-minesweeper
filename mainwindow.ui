@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>424</height>
+    <width>693</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -52,7 +52,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>500</width>
+     <width>693</width>
      <height>25</height>
     </rect>
    </property>

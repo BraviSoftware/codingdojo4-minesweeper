@@ -26,4 +26,6 @@ RESOURCES += \
     bomb.qrc \
     two.qrc \
     one.qrc \
-    brick.qrc
+    brick.qrc \
+    three.qrc \
+    four.qrc

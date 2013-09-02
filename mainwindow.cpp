@@ -17,13 +17,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    //QObjectList list = this->ui->frame->children();
-    //QObjectList::Iterator it(list);
-    //while ( it.current() ) {
-        //delete it.current();
-        //++it;
-    //}
-
+    this->ui->frame->setGeometry(10,50,500,500);
     Minesweeper *mine = new Minesweeper();
     mine->generate_field(10,10,9);
     for(int i=0;i<10;i++)
@@ -39,9 +33,9 @@ void MainWindow::on_pushButton_clicked()
             else if(mine->matrix[i][j]==2)
                 label->setPixmap(QPixmap(QString::fromUtf8(":/two_icon/two_page.png")));
             else if(mine->matrix[i][j]==3)
-                label->setPixmap(QPixmap(QString::fromUtf8(":/two_icon/two_page.png")));
+                label->setPixmap(QPixmap(QString::fromUtf8(":/three_icon/three_page.png")));
             else if(mine->matrix[i][j]==4)
-                label->setPixmap(QPixmap(QString::fromUtf8(":/two_icon/two_page.png")));
+                label->setPixmap(QPixmap(QString::fromUtf8(":/four_icon/four_page.png")));
             else
                 label->setPixmap(QPixmap(QString::fromUtf8(":/brick/brick_wall.png")));
             label->show();

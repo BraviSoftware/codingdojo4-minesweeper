@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/four_icon">
+        <file>four_page.png</file>
+    </qresource>
+</RCC>
