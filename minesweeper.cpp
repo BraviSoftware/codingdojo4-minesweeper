@@ -11,6 +11,8 @@ Minesweeper::Minesweeper()
 void Minesweeper::generate_field(int width,int height, int numberbomb)
 {
     memset(this->matrix, 0, sizeof this->matrix);
+    this->width = width;
+    this->height = height;
    // this->print_matrix(width, height);
     for(int i=0;i<numberbomb;i++){
         srand(i * time(NULL));

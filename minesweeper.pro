@@ -31,4 +31,5 @@ RESOURCES += \
     brick.qrc \
     three.qrc \
     four.qrc \
-    empty.qrc
+    empty.qrc \
+    flagged.qrc

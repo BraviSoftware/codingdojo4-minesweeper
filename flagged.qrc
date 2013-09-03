@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/flagged_icon">
+        <file>flagged.png</file>
+    </qresource>
+</RCC>
