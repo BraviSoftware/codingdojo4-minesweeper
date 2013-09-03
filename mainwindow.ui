@@ -14,7 +14,11 @@
    <enum>Qt::NoContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Cool Minesweeper</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icone.qrc">
+    <normaloff>:/principal/gnome_mines.ico</normaloff>:/principal/gnome_mines.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
@@ -53,12 +57,14 @@
      <x>0</x>
      <y>0</y>
      <width>693</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="icone.qrc"/>
+ </resources>
  <connections/>
 </ui>

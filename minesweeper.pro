@@ -32,4 +32,10 @@ RESOURCES += \
     three.qrc \
     four.qrc \
     empty.qrc \
-    flagged.qrc
+    flagged.qrc \
+    icone.qrc
+
+RC_FILE = minesweeper.rc
+
+OTHER_FILES += \
+    minesweeper.rc

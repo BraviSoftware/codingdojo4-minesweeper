@@ -35,7 +35,9 @@ void MainWindow::on_pushButton_clicked()
             label->setPixmap(QPixmap(QString::fromUtf8(":/brick/brick_wall.png")));
             label->show();
             this->mine->labels[i][j] = label;
-            connect(label, &ClickableLabel::clicked, this, &MainWindow::on_label_clicked);
+            //connect(label, &ClickableLabel::clicked, this, &MainWindow::on_label_clicked);
+
+            connect(label, SIGNAL(clicked(QMouseEvent*)) , this, SLOT(on_label_clicked(QMouseEvent*)));
         }
     }
     mine->print_matrix(10,10);

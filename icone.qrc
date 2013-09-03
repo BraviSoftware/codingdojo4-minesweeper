@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/principal">
+        <file>gnome_mines.ico</file>
+    </qresource>
+</RCC>
