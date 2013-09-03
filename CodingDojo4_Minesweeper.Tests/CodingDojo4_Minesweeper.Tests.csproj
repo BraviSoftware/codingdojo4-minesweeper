@@ -46,11 +46,17 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test1.cs" />
+    <Compile Include="MineSweeperTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodingDojo4_Minesweeper\CodingDojo4_Minesweeper.csproj">
+      <Project>{88610387-e916-4ff2-848b-33d249c39249}</Project>
+      <Name>CodingDojo4_Minesweeper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

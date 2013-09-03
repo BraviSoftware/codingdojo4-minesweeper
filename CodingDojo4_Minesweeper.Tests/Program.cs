@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodingDojo4_Minesweeper.Tests
+namespace CodingDojo4_Minesweeper
 {
     class Program
     {
