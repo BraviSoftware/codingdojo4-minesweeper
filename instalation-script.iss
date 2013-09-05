@@ -38,6 +38,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "D:\Projetos\DojoBravi\build-minesweeper-Desktop-Release\release\minesweeper.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projetos\DojoBravi\build-minesweeper-Desktop-Release\release\QtCore4.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Projetos\DojoBravi\build-minesweeper-Desktop-Release\release\QtGui4.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Projetos\DojoBravi\build-minesweeper-Desktop-Release\release\libgcc_s_dw2-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

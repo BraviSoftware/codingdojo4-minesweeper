@@ -19,12 +19,24 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    this->ui->frame->setGeometry(10,50,500,500);
+    delete this->ui->frame;
+    this->ui->frame = new QFrame(this->ui->centralwidget);
+    this->ui->frame->show();
+
+    int width = this->ui->spinBoxWidth->value();
+    int height = this->ui->spinBoxHeight->value();
+    int numberBombs = this->ui->spinBoxBombs->value();
+
+    int sizeWidth = width * 32;
+    int sizeHeight = height * 32;
+    this->ui->frame->setGeometry(30,50, sizeWidth, sizeHeight);
+    this->setGeometry(this->geometry().x(), this->geometry().y(), sizeWidth + 64, sizeHeight + 104);
+
     this->mine = new Minesweeper();
-    this->mine->generate_field(10,10,9);
-    for(int i=0;i<10;i++)
+    this->mine->generate_field(width,height,numberBombs);
+    for(int i=0;i<width;i++)
     {
-        for(int j=0;j<10;j++){            
+        for(int j=0;j<height;j++){
             ClickableLabel *label = new ClickableLabel(this->ui->frame);
             label->setObjectName(QString::fromUtf8("label2"));
             label->setGeometry(QRect(i*32, j*32 ,32, 32));
@@ -34,13 +46,11 @@ void MainWindow::on_pushButton_clicked()
             label->setProperty("y_coord",j);
             label->setPixmap(QPixmap(QString::fromUtf8(":/brick/brick_wall.png")));
             label->show();
-            this->mine->labels[i][j] = label;
-            //connect(label, &ClickableLabel::clicked, this, &MainWindow::on_label_clicked);
+            this->mine->labels[i][j] = label;            
 
             connect(label, SIGNAL(clicked(QMouseEvent*)) , this, SLOT(on_label_clicked(QMouseEvent*)));
         }
-    }
-    mine->print_matrix(10,10);
+    }    
 }
 
 void MainWindow::on_label_clicked(QMouseEvent *event)
